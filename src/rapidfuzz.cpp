@@ -180,7 +180,7 @@ static const zend_function_entry rapidfuzz_functions[] = {
  * Module dependencies
  */
 static const zend_module_dep rapidfuzz_module_deps[] = {
-    PHP_FE_END
+    { NULL, NULL, NULL, 0 }
 };
 
 /**
