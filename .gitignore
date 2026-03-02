@@ -1,0 +1,38 @@
+# PHP
+vendor/
+*.o
+*.lo
+*.la
+*.so
+*.dll
+*.dylib
+*.a
+*.swp
+*.swo
+*~
+
+# Build files
+configure
+Makefile
+Makefile.fragments
+Makefile.global
+Makefile.objects
+acinclude.m4
+aclocal.m4
+build/
+libtool/
+m4/
+run-tests.php
+tmp/
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Extension build
+modules/rapidfuzz.so

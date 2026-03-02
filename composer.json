@@ -1,0 +1,20 @@
+{
+    "name": "pronchev/rapidfuzz-php",
+    "description": "PHP extension for rapidfuzz fuzzy string matching library",
+    "type": "php-extension",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "RapidFuzz\\": "src/"
+        }
+    },
+    "suggest": {
+        "ext-rapidfuzz": "Enable rapidfuzz extension for fuzzy string matching"
+    }
+}
