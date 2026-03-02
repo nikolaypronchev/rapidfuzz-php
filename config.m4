@@ -10,4 +10,8 @@ if test "$PHP_RAPIDFUZZ" != "no"; then
 
   # Add -fPIC to CXXFLAGS
   CXXFLAGS="-fPIC -g -O2"
+
+  # Use C++ compiler for linking
+  PHP_SUBST(RAPIDFUZZ_SHARED_LIBADD)
+  RAPIDFUZZ_SHARED_LIBADD="-lstdc++"
 fi
