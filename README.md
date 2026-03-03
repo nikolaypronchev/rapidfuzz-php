@@ -144,6 +144,10 @@ composer install
 ./vendor/bin/phpunit
 ```
 
-## License
+## Performance
 
-MIT License - see LICENSE file for details.
+The extension significantly outperforms the popular [fuzzywuzzy](https://github.com/wyndow/fuzzywuzzy) PHP library. The benchmark compares `tokenSetRatio` from FuzzyWuzzy with `rapidfuzz_fuzz_token_set_ratio` from this extension:
+
+![Performance Comparison](tests/Rapidfuzz%20vs%20Fuzzy.png)
+
+The benchmark compares string matching performance with strings up to 500 characters. The extension leverages C++ optimizations and SIMD instructions, providing substantial speed improvements for fuzzy string matching operations.
