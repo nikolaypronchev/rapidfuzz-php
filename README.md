@@ -53,6 +53,54 @@ Or via command line:
 php -d extension=modules/rapidfuzz.so script.php
 ```
 
+### IDE Autocompletion
+
+For IDE autocompletion support, include the stub file in your PHP project:
+
+**VS Code (PHP Intelephense):**
+Add to your `.vscode/settings.json`:
+```json
+{
+    "intelephense.stubs": [
+        "rapidfuzz"
+    ]
+}
+```
+
+Or use the stub file directly by copying `src/rapidfuzz.stub.php` to your project's stubs directory.
+
+**PHPStorm:**
+1. Copy `src/rapidfuzz.stub.php` to your project or a stubs directory
+2. Go to Settings → PHP → Include path
+3. Add the path to the stub file
+
+**Manual stub configuration:**
+Copy [`src/rapidfuzz.stub.php`](src/rapidfuzz.stub.php) to your project and include it in your PHP include path.
+
+### Troubleshooting
+
+If you see "Undefined function" errors in your IDE:
+
+1. **Verify the extension is loaded in PHP:**
+   ```bash
+   php -m | grep rapidfuzz
+   ```
+
+2. **Check PHP is using the correct php.ini:**
+   ```bash
+   php --ini
+   ```
+
+3. **Make sure the extension is enabled in the correct php.ini file:**
+   ```ini
+   extension=rapidfuzz.so
+   ```
+
+4. **If using PHP CLI, you may need to specify the extension path explicitly:**
+   ```bash
+   php -d extension=modules/rapidfuzz.so script.php
+   ```
+
 ### PHP API
 
 ```php
