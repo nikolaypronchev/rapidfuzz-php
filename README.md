@@ -134,16 +134,6 @@ $result = rapidfuzz_fuzz_ratio("abc", "xyz", 50.0); // 0.0 (below 50%)
 
 All functions return a float between 0 and 100, where 100 means identical strings.
 
-## Testing
-
-```bash
-# Install dependencies
-composer install
-
-# Run tests
-./vendor/bin/phpunit
-```
-
 ## Performance
 
 The extension significantly outperforms the popular [fuzzywuzzy](https://github.com/wyndow/fuzzywuzzy) PHP library. The benchmark compares `tokenSetRatio` from FuzzyWuzzy with `rapidfuzz_fuzz_token_set_ratio` from this extension:
